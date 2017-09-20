@@ -487,7 +487,7 @@ extension CGRect {
             preconditionFailure("Cannot align to this combination of edges")
         }
     }
-
+    
     /// Modifies all values by setting the size while centering the rect.
     public mutating func centerInPlace(_ size: CGSize) {
         self = center(size)
@@ -505,11 +505,11 @@ extension CGRect {
 }
 
 // MARK: transform
-
-public func ==(t1: CGAffineTransform, t2: CGAffineTransform) -> Bool {
-    return t1 == t2
+extension CGAffineTransform {
+    static public func ==(t1: CGAffineTransform, t2: CGAffineTransform) -> Bool {
+        return t1 == t2
+    }
 }
-
 extension CGAffineTransform: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "(\(a),\(b),\(c),\(d),\(tx),\(ty))"
