@@ -22,13 +22,7 @@ import Foundation
 // MARK: CGPoint
 
 extension CGPoint {
-
-    /// Creates a point with unnamed arguments.
-    public init(_ x: CGFloat, _ y: CGFloat) {
-        self.x = x
-        self.y = y
-    }
-
+    
     /// Returns a copy with the x value changed.
     public func with(x: CGFloat) -> CGPoint {
         return CGPoint(x: x, y: y)
@@ -43,12 +37,6 @@ extension CGPoint {
 
 extension CGSize {
 
-    /// Creates a size with unnamed arguments.
-    public init(_ width: CGFloat, _ height: CGFloat) {
-        self.width = width
-        self.height = height
-    }
-
     /// Returns a copy with the width value changed.
     public func with(width: CGFloat) -> CGSize {
         return CGSize(width: width, height: height)
@@ -62,18 +50,6 @@ extension CGSize {
 // MARK: CGRect
 
 extension CGRect {
-
-    /// Creates a rect with unnamed arguments.
-    public init(_ origin: CGPoint, _ size: CGSize) {
-        self.origin = origin
-        self.size = size
-    }
-
-    /// Creates a rect with unnamed arguments.
-    public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
-        self.origin = CGPoint(x: x, y: y)
-        self.size = CGSize(width: width, height: height)
-    }
 
     // MARK: access shortcuts
 
