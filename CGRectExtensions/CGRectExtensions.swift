@@ -228,7 +228,8 @@ extension CGRect {
 
     /// Modifies the x and y values by offsetting.
     public mutating func offsetInPlace(_ dx: CGFloat, _ dy: CGFloat) {
-        offsetInPlace(dx, dy)
+        x += dx
+        y += dy
     }
     /// Modifies the x value values by offsetting.
     public mutating func offsetInPlace(dx: CGFloat = 0) {
@@ -481,11 +482,6 @@ extension CGRect {
 }
 
 // MARK: transform
-extension CGAffineTransform {
-    static public func ==(t1: CGAffineTransform, t2: CGAffineTransform) -> Bool {
-        return t1 == t2
-    }
-}
 extension CGAffineTransform: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "(\(a),\(b),\(c),\(d),\(tx),\(ty))"
