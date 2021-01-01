@@ -18,7 +18,7 @@ class OffsetTests: XCTestCase {
     }
 
     func testOffsettingBySize() {
-        XCTAssertEqual(rect.offsetBy(CGSize(3, 4)), CGRect(x: 4, y: 6, width: 10, height: 20))
+        XCTAssertEqual(rect.offsetBy(CGSize(width: 3, height: 4)), CGRect(x: 4, y: 6, width: 10, height: 20))
     }
 }
 
@@ -42,7 +42,7 @@ class MutatingOffsetTests: XCTestCase {
     }
 
     func testOffsettingBySize() {
-        rect.offsetInPlace(CGSize(3, 4))
+        rect.offsetInPlace(CGSize(width: 3, height: 4))
         XCTAssertEqual(rect, CGRect(x: 4, y: 6, width: 10, height: 20))
     }
 }
